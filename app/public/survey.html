@@ -181,12 +181,13 @@
   <script type="text/javascript">
 
     var config = {
-      '.chosen-select'           : {},
-      '.chosen-select-deselect'  : {allow_single_deselect:true},
-      '.chosen-select-no-single' : {disable_search_threshold:10},
-      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
-      '.chosen-select-width'     : {width:"95%"}
+      ".chosen-select"           : {},
+      ".chosen-select-deselect"  : {allow_single_deselect:true},
+      ".chosen-select-no-single" : {disable_search_threshold:10},
+      ".chosen-select-no-results": {no_results_text:'Oops, nothing found!'},
+      ".chosen-select-width"     : {width:"95%"}
     }
+
     for (var selector in config) {
       $(selector).chosen(config[selector]);
     }
@@ -210,18 +211,20 @@
 
 		if (validateForm() == true)
 		{
-	    	var userData = {
+	    	var newFriend = {
 	    		name: $("#name").val(),
 	    		photo: $("#photo").val(),
-	    		scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+	    		scores: [$("#q1").val(),$("#q2").val(),$("#q3").val(),$("#q4").val(),$("#q5").val(),$("#q6").val(),$("#q7").val(),$("#q8").val(),$("#q9").val(),$("#q10").val()]
 	    	}
 
 	    	var currentURL = window.location.origin;
 
-	    	$.post(currentURL + "/api/friends", userData, function(data){
+	    	$.post(currentURL + "/api/friends", newFriend, function(data){
 
-	    		$("#bestMatchName").text(data.bestMatch.name);
-	    		$("#bestMatchPhoto").attr("src", data.bestMatch.photo);
+	    		$("#bestMatchName").text(data.name);
+	    		$("#bestMatchPhoto").attr("src", data.photo);
+	    		$("#bestMatchPhoto").attr("height", "450");
+	    		$("#bestMatchPhoto").attr("width", "350");
 
 		    	$("#resultsModal").modal('toggle');
 
@@ -229,7 +232,7 @@
 		}
 		else
 		{
-			alert("Please fill out all fields before submitting!");
+			alert("Please fill out all fields before submitting. Thank you.");
 		}
     	
     	return false;

@@ -1,9 +1,7 @@
+//In order to provide more diverse results, I took objects from the array in the sample app provided in the instructions.
+//I also threw in some fictional characters for my own amusement.
+
 var friends = [
-	{
-	"name": "Ahmed",
-	"photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-	"scores": ["5","1","4","4","5","1","2","5","4","1"]
-	},
 	{
 	"name": "Jacob Deming",
 	"photo": "https://pbs.twimg.com/profile_images/691785039043022849/oWsy8LNR.jpg",
@@ -31,9 +29,24 @@ var friends = [
 	"scores": ["4","4","2","3","2","2","3","2","4","5"]
 	},
 	{
-	"name": "Tony",
-	"photo": "nopelink",
-	"scores": ["5","2","3","1","1","2","4","1","1","4"]
+	"name": "Tony Soprano",
+	"photo": "http://media.salon.com/2013/06/1337736523_05_james_gandolfini.jpg",
+	"scores": ["4","5","3","5","1","5","5","3","1","2"]
+	},
+	{
+	"name": "Luke Skywalker",
+	"photo": "https://vignette3.wikia.nocookie.net/starwars/images/1/15/Luke_Skywalker_Ep_7_SWCT.png",
+	"scores": ["4","4","5","3","3","1","4","3","2","5"]
+	},
+	{
+	"name": "Al Paca",
+	"photo": "https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/1468573_1422220441343257_242139804_n.jpg?oh=1b1b81a0a12ce49e3313149572ba8034&oe=5A82932F",
+	"scores": ["3","4","4","4","4","2","4","3","2","4"]
+	},
+	{
+	"name": "Selina Meyer",
+	"photo": "https://vignette.wikia.nocookie.net/veep/images/8/81/Screen_Shot_2017-01-04_at_10.28.15_PM.png",
+	"scores": ["1","5","5","5","5","5","5","5","1","1"]
 	}
 ]
 
