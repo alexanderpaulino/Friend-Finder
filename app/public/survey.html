@@ -166,7 +166,7 @@
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
 	        <h2 class="modal-title"><strong>Best Match</strong></h2>
 	      </div>
-	      <div class="modal-body">
+	      <div class="modal-body text-center">
 	        <h2 id="bestMatchName"></h2>
 	        <img id="bestMatchPhoto" src="" alt="">
 	      </div>
@@ -215,7 +215,7 @@
 	    		name: $("#name").val(),
 	    		photo: $("#photo").val(),
 	    		scores: [$("#q1").val(),$("#q2").val(),$("#q3").val(),$("#q4").val(),$("#q5").val(),$("#q6").val(),$("#q7").val(),$("#q8").val(),$("#q9").val(),$("#q10").val()]
-	    	}
+	    		}
 
 	    	var currentURL = window.location.origin;
 
@@ -223,12 +223,12 @@
 
 	    		$("#bestMatchName").text(data.name);
 	    		$("#bestMatchPhoto").attr("src", data.photo);
-	    		$("#bestMatchPhoto").attr("height", "450");
-	    		$("#bestMatchPhoto").attr("width", "350");
+	    		$("#bestMatchPhoto").attr("width", "300");
 
 		    	$("#resultsModal").modal('toggle');
 
 	    	});
+
 		}
 		else
 		{
@@ -237,6 +237,11 @@
     	
     	return false;
     });
+
+    //Once the modal is closed, the page refreshes.
+    $('.modal').on('hidden.bs.modal', function(){
+    location.reload();
+	});
 
   </script>
 
